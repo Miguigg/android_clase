@@ -1,0 +1,7 @@
+org/esei/dm/calcularletranif/core/CalculoLetraNif.java
+ org.esei.dm.calcularletranif.core.CalculoLetraNif
+org/esei/dm/calcularletranif/BuildConfig.java
+ org.esei.dm.calcularletranif.BuildConfig
+org/esei/dm/calcularletranif/ui/MainActivity.java
+ org.esei.dm.calcularletranif.ui.MainActivity
+ org.esei.dm.calcularletranif.ui.MainActivity$1

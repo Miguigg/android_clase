@@ -1,0 +1,4 @@
+#Wed Sep 21 11:19:06 CEST 2022
+base.0=C\:\\Users\\migue\\Documents\\MEGA\\MEGAsync\\4 Curso\\DM\\practicas\\p1\\CalcularLetraNif\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calcula Letra Nif</string>
+    <string name="label_value">DNI</string>
+    <string name="label_result">Resultado</string>
+    <string name="label_default_result">Sin letra</string>
+    <string name="Valor">DNI</string>
+    <string name="fallo">Error: DNI incorrecto</string>
+    <string name="btnOk">Calcular</string>
+</resources>
