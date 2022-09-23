@@ -3,4 +3,7 @@
     <string name="campo1">ancho</string>
     <string name="campo2">largo</string>
     <string name="btn">calcular</string>
+    <string name="result">Resultado:</string>
+    <string name="Grados">Indica los grados</string>
+    <string name="conversion">Pasar a:</string>
 </resources>
