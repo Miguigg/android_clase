@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void transforma(){
+        TextView set = findViewById(R.id.onChange);
         String opcion = sp1.getSelectedItem().toString();
         double valor = Double.parseDouble((dg.getText().toString()));
         double result = 0;
@@ -68,9 +69,11 @@ public class MainActivity extends AppCompatActivity {
             switch (opcion) {
                 case "celsius":
                     result = (valor - 32) * 5;
+                    set.setText(String.valueOf(result));
                     break;
                 case "farenheit":
                     result = (valor * (9 / 5) + 32);
+                    set.setText(String.valueOf(result));
                     break;
             }
             //Toast.makeText(this,, Toast.LENGTH_LONG).show();
