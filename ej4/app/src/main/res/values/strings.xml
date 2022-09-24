@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ej4</string>
+    <string name="consumo">Consumo por 100km</string>
+    <string name="distancia">Distancia a recorrer</string>
+    <string name="via">Tipo de via</string>
+    <string name="tiempo">Tiempo empleado</string>
+</resources>
