@@ -4,4 +4,7 @@
     <string name="distancia">Distancia a recorrer</string>
     <string name="via">Tipo de via</string>
     <string name="tiempo">Tiempo empleado</string>
+    <string name="calcTiempo">Tiempo empleado</string>
+    <string name="consumoTotal">Consumo total</string>
+    <string name="res">El resultado es:</string>
 </resources>
