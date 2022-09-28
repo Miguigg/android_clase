@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BasicBurgerBuilder</string>
+    <string name="lugar">¿Donde lo vas a consumir?</string>
 </resources>
