@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BasicBurgerBuilder</string>
+    <string name="lugar">¿Donde lo vas a consumir?</string>
+    <string name="barra">Barra 0.25€</string>
+    <string name="terraza">Terraza 1€</string>
+    <string name="desc">¿Tienes algun descuento?</string>
+</resources>
