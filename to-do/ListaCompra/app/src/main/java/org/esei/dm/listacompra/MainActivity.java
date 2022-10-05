@@ -19,6 +19,10 @@ import org.esei.dm.listacompra.mode.productos;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -33,14 +37,15 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     this.items = new ArrayList<productos>();
-
+    this.itemsAdapter =
+        new ArrayAdapter<productos>(
+            MainActivity.this, android.R.layout.simple_list_item_1, this.items);
+            
     Button btAdd = (Button) this.findViewById(R.id.btAdd);
     ListView lvItems = (ListView) this.findViewById(R.id.lvItems);
 
     lvItems.setLongClickable(true);
-    this.itemsAdapter =
-        new ArrayAdapter<productos>(
-            MainActivity.this, android.R.layout.simple_list_item_1, this.items);
+
 
     // creamos el evento para el longclick
     lvItems.setAdapter(this.itemsAdapter);
@@ -71,12 +76,36 @@ public class MainActivity extends AppCompatActivity {
         });
   }
 
+  @Override
   public void onResume() {
 
     super.onResume();
+      try {
+          testDates();
+      } catch (ParseException e) {
+          e.printStackTrace();
+      }
   }
 
-  private void updateElement(int pos) {
+    private void testDates() throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
+        String str = formatter.format(date);
+
+        Date actual = formatter.parse(str);
+
+        for(int i = 0; i<items.size();i++){
+            Date temp = items.get(i).getFecha();
+            if(temp.compareTo(actual)>0){
+                MainActivity.this.items.remove(i);
+                MainActivity.this.itemsAdapter.notifyDataSetChanged();
+                MainActivity.this.updateStatus();
+            }
+        }
+    }
+
+    private void updateElement(int pos) {
     LayoutInflater inf = getLayoutInflater();
     View v = inf.inflate(R.layout.popup, null);
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
